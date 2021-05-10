@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input, button, p {
+  font: bold 'Roboto', sans-serif;
+}
+
+#content {
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 450px;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+#search-city {
+  width: 100%;
+  display: flex;
+}
+
+#search-city input {
+  flex: 1;
+  margin-right: 0.25rem;
+  border: 1px solid rgba(0,0,0,0.1);
+  height: 3rem;
+  border-radius: 0.25rem;
+  padding: 1rem 1rem;
+}
+
+#search-city button {
+  background-color: rgb(0, 209, 0);
+  color: #FFF;
+  padding: 0rem 1.5rem;
+  border: 0;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-city button img {
+  width: 80%;
+}
+
+#search-city button:hover{
+  background-color: rgb(2, 189, 2);
+}
+
+#city {
+  background: url("assets/back.png") center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 70%;
+  border-radius: 2.5rem;
+  color: #FFF;
+  text-align: center;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#city img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: rgb(0, 209, 0);
+  color: #FFF;
+  width: 100%;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay {
+  background: rgba(0,0,0,0.2);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+#modal-content {
+  width: 60vw;
+  height: 70vh;
+  background: #FFF;
+  border-radius: 0.4rem;
+  padding: 1rem 1rem;
+  position: relative;
+}
+
+#modal-content span {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+#modal-content div {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.1);
+}
