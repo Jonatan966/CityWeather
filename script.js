@@ -42,11 +42,23 @@ const DOM = {
 
 const Modal = {
   modal: document.querySelector(".modal-overlay"),
+  mymap: L.map('map').setView([-23.1697205, -47.1473495,], 7.75),
 
   toggleModal(){
     Modal.modal.classList.toggle("active");
   },
+
+  showMap(){
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1,
+      accessToken: 'pk.eyJ1IjoiZGFtYXNvbWFnbm8iLCJhIjoiY2tnNnh4OHIzMDIwYjJwbndjZXJwdzJlYiJ9.kVuWDJS8DvJgmtDyqr1ujQ'
+    }).addTo(Modal.mymap);
+  }
 }
+
+Modal.showMap();
 
 button.addEventListener("click", SearchCity.showCity);
 openModal.addEventListener("click", Modal.toggleModal);
