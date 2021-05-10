@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+@media(max-width: 720px){
+  html {
+    font-size: 85.7%;
+  }
+}
+
 input, button, p {
   font: bold 'Roboto', sans-serif;
 }
@@ -26,19 +32,18 @@ input, button, p {
 
 #search-city input {
   flex: 1;
-  margin-right: 0.25rem;
   border: 1px solid rgba(0,0,0,0.1);
   height: 3rem;
-  border-radius: 0.25rem;
+  border-radius: 0.30rem 0rem 0rem 0.5rem;
   padding: 1rem 1rem;
 }
 
 #search-city button {
   background-color: rgb(0, 209, 0);
   color: #FFF;
-  padding: 0rem 1.5rem;
+  padding: 0rem 1rem;
   border: 0;
-  border-radius: 0.4rem;
+  border-radius: 0rem 0.30rem 0.5rem 0rem;
   cursor: pointer;
   transition: background 0.2s;
 
@@ -65,6 +70,7 @@ input, button, p {
   text-align: center;
   cursor: pointer;
 
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,7 +96,7 @@ footer {
 }
 
 .modal-overlay {
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.5);
   width: 100%;
   height: 100vh;
   position: absolute;
