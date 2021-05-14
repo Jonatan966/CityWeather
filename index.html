@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,37 +18,36 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
   crossorigin=""></script>
-
 </head>
 <body>
-
   <div id="content">
     <header id="search-city">
-      <input type="text" placeholder="Digite a cidade. Ex: Sao Paulo">
-      <button>
+      <input placeholder="Digite a cidade. Ex:Sao Paulo">
+      <button class="search">
         <img src="assets/search.png" alt="Pesquisar">
       </button>
     </header>
 
     <main id="city">
       <div>
-        <img src="assets/day.png" alt="DiaOuNoite" id="dayOrNight">
-        <h1 id="degress">18º</h1>
+        <img src="assets/dia.png" alt="DiaOuNoite" class="dayOrNight">
+        <h1 class="degress">18º</h1>
+      </div>
+
+      <div>
+        <p class="region">Sao Paulo, SP</p>
       </div>
     </main>
-
-    <footer id="region">
-      <p>Sao Paulo, SP</p>
-    </footer>
   </div>
 
   <div class="modal-overlay">
-    <div id="modal-content">
+    <div class="modal-content">
       <span class="close-modal">X</span>
-      <div id="map"></div>
+      <div id="map" class="leaflet-container"></div>
     </div>
   </div>
-
+  
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
