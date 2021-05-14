@@ -9,6 +9,10 @@ let leafletMap = L.map('map');
 let cityProps;
 let cities = [];
 
+if(!localStorage.getItem("alert")){
+  alert("Clique na imagem para acessar o mapa da cidade");
+  localStorage.setItem("alert", true);
+}
 
 function renderImage(imageURL){
   return `linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(${imageURL})`;

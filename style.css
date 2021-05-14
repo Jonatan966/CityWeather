@@ -135,14 +135,17 @@ body {
   opacity: 1;
 }
 
+.active .modal-content {
+  animation: showMap 2s;
+}
+
 .modal-content {
-  width: 60vw;
-  height: 90vh;
+  width: 50vw;
+  height: 70vh;
   background: #FFF;
   border-radius: 0.4rem;
   padding: 1rem 1rem;
   position: relative;
-  animation-name: showMap 2.5s;
 }
 
 .modal-content span {
