@@ -101,6 +101,10 @@ body {
   line-height: 3rem;
 }
 
+#city div:first-child {
+  margin: auto;
+}
+
 #city div:last-child {
   background: linear-gradient(rgba(85, 223, 85, 1) , rgba(85, 223, 100, 1));
   color: rgb(255, 255, 255);
@@ -110,7 +114,6 @@ body {
   border-radius: 0rem 0rem 0.5rem 0.5rem;;
 
   position: relative;
-  bottom: -12.9rem;
   display: flex;
   justify-content: center;
   align-items: center;
